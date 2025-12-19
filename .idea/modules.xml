@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/solucoes/L1_fundamentos/L1_fundamentos.iml" filepath="$PROJECT_DIR$/solucoes/L1_fundamentos/L1_fundamentos.iml" />
       <module fileurl="file://$PROJECT_DIR$/solucoes/L2_Estruturas/L2_Estruturas.iml" filepath="$PROJECT_DIR$/solucoes/L2_Estruturas/L2_Estruturas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solucoes/L3_conta_bancaria/L3_conta_bancaria.iml" filepath="$PROJECT_DIR$/solucoes/L3_conta_bancaria/L3_conta_bancaria.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/exercicios-java-basico-dio-ciandt.iml" filepath="$PROJECT_DIR$/.idea/exercicios-java-basico-dio-ciandt.iml" />
     </modules>
   </component>
