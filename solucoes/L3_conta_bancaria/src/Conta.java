@@ -11,7 +11,7 @@ public class Conta {
         if (primeiro_deposito <= 500){
             cqEspecial = 50;
         } else {
-            cqEspecial = primeiro_deposito/0.5;
+            cqEspecial = primeiro_deposito*0.5;
         }
 
         this.cq_especial = cqEspecial;
@@ -27,14 +27,11 @@ public class Conta {
         return cq_especial;
     }
 
-    public double getLimite() {
-        return limite;
-    }
-
     //métodos
     public void depositar(double deposito) {
         if(is_cq_usando){
-            this.saldo += deposito/0.2;
+            this.saldo += (deposito*0.8);
+            this.is_cq_usando = false;
         } else {
             this.saldo += deposito;
         }
@@ -54,21 +51,21 @@ public class Conta {
     public void sacar(double saque){
         if(saque <= saldo){
             this.saldo -= saque;
-            System.out.printf("Saque de %.2f realizado com sucesso! \nO saldo atual é de %.2f", saque, saldo);
+            System.out.printf("Saque de %.2f realizado com sucesso! \nO saldo atual é de %.2f\n", saque, saldo);
         }
-        System.out.println("Saldo não disponível para o saque.");
+        System.out.println("Saldo não disponível para o saque.\n");
     }
 
     public void pagar_boleto(double valor){
         if(valor > saldo && valor <= limite){
           this.saldo = 0;
           this.is_cq_usando = true;
-          System.out.println("Pagamento realizado com sucesso!");
+          System.out.println("Pagamento realizado com sucesso!\n");
         } else if(valor <= saldo && valor > 0){
             this.saldo -= valor;
-            System.out.println("Pagamento realizado com sucesso!");
+            System.out.println("Pagamento realizado com sucesso!\n");
         } else{
-            System.out.println("Limite não disponível para o pagamento!");
+            System.out.println("Limite não disponível para o pagamento!\n");
         }
     }
 }
